@@ -22,7 +22,7 @@ public class TestClass {
     private AutoService autoService;
 
     @Before
-    public void makePreparationl() {
+    public void makePreparation() {
         autoService = new AutoServiceImpl(new AutoRepositoryImpl());
     }
 
@@ -32,11 +32,11 @@ public class TestClass {
         Assert.assertNotNull(autos.get(0));
     }
 
-    @org.junit.Test
+    @Test
     public void checGetAuto() {
-        List<Auto> audios = new ArrayList<Auto>(1);
-        audios.add(new Auto("test", 1.1, 2.2, 3.3));
+        List<Auto> autos = new ArrayList<Auto>(1);
+        autos.add(new Auto("test", 1.1, 2.2, 3.3));
         AutoService autoService = mock(AutoService.class);
-        when(autoService.getAutos()).thenReturn((List<Auto>) audios);
+        when(autoService.getAutos()).thenReturn((List<Auto>) autos);
     }
 }

@@ -49,4 +49,14 @@ public class Auto {
     public void setMaxSpeed(double maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
+
+    @Override
+    public String toString() {
+        return "Auto{" +
+                "name='" + name + '\'' +
+                ", maxPower=" + maxPower +
+                ", torque=" + torque +
+                ", maxSpeed=" + maxSpeed +
+                '}';
+    }
 }
