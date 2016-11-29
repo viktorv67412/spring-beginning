@@ -1,13 +1,21 @@
 package com;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.model.Auto;
+import com.service.AutoService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.List;
 
 public class AutoTest {
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-context.xml");
-        Auto auto = context.getBean("auto", Auto.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+        AutoService autoService = context.getBean("autoService", AutoService.class);
+        List<Auto> autos = autoService.getAutos();
 
-        System.out.println(auto);
+        for (Auto auto : autos){
+            System.out.println(auto.getName() + " " + auto.maxPower() + " " + auto.getTorque() + " " + auto.getMaxSpeed());
+        }
     }
 }
