@@ -13,7 +13,7 @@ public class AutoServiceImpl implements AutoService {
     @Autowired
     AutoRepository autoRepository;
 
-    @Autowired
+    //@Autowired
     public AutoServiceImpl(AutoRepository autoRepository) {
         this.autoRepository = autoRepository;
     }
@@ -29,7 +29,7 @@ public class AutoServiceImpl implements AutoService {
         return autoRepository;
     }
 
-    @Autowired
+    //@Autowired
     public void setAutoRepository(AutoRepository autoRepository) {
         this.autoRepository = autoRepository;
     }
