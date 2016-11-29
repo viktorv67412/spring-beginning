@@ -14,7 +14,7 @@ public class AutoTest {
         AutoService autoService = context.getBean("autoService", AutoService.class);
         List<Auto> autos = autoService.getAutos();
 
-        for (Auto auto : autos){
+        for (Auto auto : autos) {
             System.out.println(auto.getName() + " " + auto.maxPower() + " " + auto.getTorque() + " " + auto.getMaxSpeed());
         }
     }
