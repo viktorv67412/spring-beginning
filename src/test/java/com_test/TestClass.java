@@ -6,6 +6,7 @@ import com.service.AutoService;
 import com.service.AutoServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
@@ -16,7 +17,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @RunWith(JUnit4.class)
-public class Test {
+public class TestClass {
 
     private AutoService autoService;
 
@@ -25,7 +26,7 @@ public class Test {
         autoService = new AutoServiceImpl(new AutoRepositoryImpl());
     }
 
-    @org.junit.Test
+    @Test
     public void getAutoTest() {
         List<Auto> autos = autoService.getAutos();
         Assert.assertNotNull(autos.get(0));
