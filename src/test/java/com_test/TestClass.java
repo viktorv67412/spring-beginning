@@ -37,6 +37,6 @@ public class TestClass {
         List<Auto> autos = new ArrayList<Auto>(1);
         autos.add(new Auto("test", 1.1, 2.2, 3.3));
         AutoService autoService = mock(AutoService.class);
-        when(autoService.getAutos()).thenReturn((List<Auto>) autos);
+        when(autoService.getAutos()).thenReturn(autos);
     }
 }
