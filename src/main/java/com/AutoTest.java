@@ -17,5 +17,7 @@ public class AutoTest {
         for (Auto auto : autos) {
             System.out.println(auto.getName() + " " + auto.maxPower() + " " + auto.getTorque() + " " + auto.getMaxSpeed());
         }
+
+
     }
 }
