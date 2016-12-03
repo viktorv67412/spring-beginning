@@ -40,7 +40,7 @@ public class CustomRunListener extends RunListener {
                 "</body>\n" +
                 "</html>";
 
-        File file = new File("/Users/viktor/Desktop/Java EE/git_repos/spring-beginning/src/main/webapp/" + name + ".html");
+        File file = new File(name + ".html");
 
         FileWriter fileWriter = new FileWriter(file, true);
         fileWriter.write(info);
@@ -60,7 +60,7 @@ public class CustomRunListener extends RunListener {
                 "</body>\n" +
                 "</html>";
 
-        File file = new File("/Users/viktor/Desktop/Java EE/git_repos/spring-beginning/src/main/webapp/" + name + ".html");
+        File file = new File(name + ".html");
 
         FileWriter fileWriter = new FileWriter(file, true);
         fileWriter.write(info);
